@@ -21,21 +21,22 @@ This diagram shows the relationships between Terraform AWS resources for this la
 
 ```mermaid
 graph TD
-    VPC["VPC (Ciudad)"]
-    SUBNET["Subnet (Colonia)"]
-    IGW["Internet Gateway (Puerta)"]
-    RT["Route Table (Calle)"]
+    VPC["VPC (City)"]
+    SUBNET["Subnet (Colony)"]
+    IGW["Internet Gateway (Internet Access)"]
+    RT["Route Table (Street Name)"]
     RTASSOC["Route Table Association"]
     SG["Security Group (Firewall)"]
-    EC2["EC2 Instance (Casa)"]
+    EC2["EC2 Instance (Home)"]
 
+
+    SG --> VPC
+    IGW --> VPC
     VPC --> SUBNET
-    VPC --> IGW
-    VPC --> SG
-    SUBNET --> RTASSOC
+    RT --> VPC
+    RT --> IGW
+    RTASSOC --> SUBNET
     RT --> RTASSOC
     SUBNET --> EC2
-    SG --> EC2
-    IGW --> RT
 
 
