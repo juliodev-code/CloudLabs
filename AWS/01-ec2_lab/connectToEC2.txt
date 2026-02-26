@@ -1,0 +1,2 @@
+chmod 400 terraform-lab-key.pem
+ssh -i your-key.pem ec2-user@<PUBLIC_IP>
