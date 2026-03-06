@@ -1,0 +1,18 @@
+terraform init
+terraform plan
+terraform apply
+
+terraform output vm_external_ip
+
+http://VM_IP
+
+gcloud compute ssh terraform-lab-vm --zone us-central1-a
+
+terraform destroy
+
+
+roles/compute.admin
+roles/iam.serviceAccountUser
+
+
+gcloud services enable compute.googleapis.com
